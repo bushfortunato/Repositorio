@@ -1,0 +1,7 @@
+price,type,ISBN,title,authors
+25,ExclusiveBook,ZAB,Introduction to Python,Guido van Rossum
+140,UsedBook,USY,The Art of Computer Programming,Donalth Knuth
+40,NewBook,1AB,JavaScript: The Good Parts,Douglas Crockford
+140,UsedBook,USY,The Art of Computer Programming,Donalth Knuth
+30,UsedBook,AAA,The C Programming Language,"Dennis M. Ritchie, Brian W. Kernighan"
+30,NewBook,AAA,The C Programming Language,"Dennis M. Ritchie, Brian W. Kernighan"

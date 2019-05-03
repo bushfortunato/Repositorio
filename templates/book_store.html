@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StoreBooks</title>
+    <style>
+        label{}
+    </style>
+</head>
+<body>
+    <h1>Book Store</h1>
+
+    <nav style="display: flex; flex-direction: row; justify-content: space-evenly; border: 1px solid gray;">
+    <h7><a href="{{ url_for('shopping_cart') }}">Shopping cart</a></h7>
+
+</nav>
+
+    <div class="content" style="padding-top: 50px; display: flex; flex-direction: row; justify-content: space-evenly;">
+    {% for book in books %}
+        <div class="box3" style="width: 200px; height: 175px; border: 2px dotted yellow;">
+            <label><b>Title : </b> {{book.title}}</label>
+            <br/>
+            <label><b>Author : </b> {{book.author}}</label>
+            <br/>
+            <label><b>ISBN : </b> {{book.isbn}}</label>
+            <br/>
+            <label><b>Price : </b> $ {{book.price}}</label>
+            <br/>
+            <br/>
+            <br/>
+
+                <a href="book_store/{{books.index(book)}}" style="margin-top: 200px"><input type="button" value="Add cart"></a>
+
+        </div>
+        {% endfor %}
+</div>
+
+    <footer style="margin-top: 50px; display: flex; justify-content: center; border: 2px solid gray;">
+    www.book_store.co.ao
+</footer>
+
+</body>
+</html>

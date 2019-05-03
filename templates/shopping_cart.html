@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping cart</title>
+        <style>
+            table, th, td {border: 1px solid black;
+                           border-collapse: collapse;}
+            th {text-align: left;}
+            th, td {padding: 5px;}
+
+        </style>
+</head>
+<body>
+    <h1>Shopping cart</h1>
+
+
+    <nav style="display: flex; flex-direction: row; justify-content: space-evenly; border: 1px solid gray;">
+    <h7><a href="{{ url_for('books') }}">Store</a></h7>
+
+</nav>
+
+    <div class="content" style="padding-top: 50px; display: flex; flex-direction: row; justify-content: space-evenly;">
+    <table style="width:50%">
+          <tr>
+            <th>Titulo</th>
+            <th>Author</th>
+            <th>Price</th>
+          </tr>
+
+        {% for c in cart %}
+          <tr>
+            <td> {{c.title}}</td>
+            <td> {{c.author}}</td>
+            <td> € {{c.price}}</td>
+          </tr>
+        {% endfor %}
+</table>
+</div>
+
+    <footer style="margin-top: 50px; display: flex; justify-content: center; border: 2px solid gray;">
+    www.book_store.co.ao
+</footer>
+
+</body>
+</html>
